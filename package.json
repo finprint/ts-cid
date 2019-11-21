@@ -1,0 +1,38 @@
+{
+  "name": "@finprint/ts-cid",
+  "version": "1.0.0",
+  "author": "Finprint",
+  "license": "BSD-3-Clause",
+  "description": "Finprint CID Implementation in JavaScript.",
+  "homepage": "https://github.com/finprint/ts-cid",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/finprint/ts-cid.git"
+  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist/src"
+  ],
+  "scripts": {
+    "compile": "tsc",
+    "compile:watch": "npm run compile -- --watch",
+    "prepack": "npm run compile",
+    "test": "npx mocha dist/test",
+    "test:watch": "npx nodemon --exec npm run test"
+  },
+  "dependencies": {
+    "multibase": "0.6.0",
+    "multicodec": "0.5.5",
+    "varint": "5.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "4.1.7",
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.12.0",
+    "chai": "4.2.0",
+    "mocha": "6.0.2",
+    "nodemon": "1.18.10",
+    "typescript": "3.5.1"
+  }
+}
